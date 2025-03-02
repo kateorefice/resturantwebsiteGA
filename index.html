@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: rgba(197, 222, 240, 1);
+}
+div {
+  height: 250px;
+  background-size: cover;
+background-position: center;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+
+
+
+h1 {
+  font-family: "Phudu", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+font-size:75px;
+text-align:center;
+color: rgba(96, 174, 230, 1);
+margin: 60px 0 0 0
+}
+h2 {
+  text-align: center;
+  color: rgba(65, 159, 227, 1);
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .3s ease;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 66px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://images.unsplash.com/photo-1666380510734-c81855f0afdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-size: cover;
+background-position: center top -100px;
+height: 250px;
+width: 90%;
+margin: 10px auto;
+border-radius: 12px;
+}
+.second{
+  background-image: url("https://images.unsplash.com/photo-1718985341774-165fcfc25c71?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-size: cover;
+background-position: center top -250px;
+height: 250px;
+width: 90%;
+margin: 10px auto;
+border-radius: 12px;
+}
+.dessert{
+  background-image: url("https://images.unsplash.com/photo-1586971878888-6a650afce686?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-size: cover;
+background-position: center top -140px;
+height: 250px;
+width: 90%;
+margin: 10px auto;
+border-radius: 12px;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Kate's Restaurant</h1>
+<h2>A New England Eatery</h2>
+<div class="first">
+  <p>Connecticut-Style Lobster Roll <span class="price">$24</span><br />
+  <small>Warm lobster meat tossed in butter, served on a toasted New England-style bun. </small></p>
+</div>
+
+<div class="second">
+  <p>New England Clam Chowder <span class="price">$12</span><br />
+  <small>A creamy soup with fresh clams, potatoes, onions, and bacon.</small></p>
+</div>
+  
+<div class="dessert">
+  <p>Classic Johnnycakes <span class="price">$8</span><br />
+  <small>Cornmeal pancakes served with maple syrup and butter.</small></p>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+});
+</script>
+</body>
+</html>
